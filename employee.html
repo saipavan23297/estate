@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee View - MA ENTERPRISES</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="employee.css">
+</head>
+<body>
+    <main role="main">
+        <h1 class="main-heading">Customer Inquiries</h1>
+        <div id="inquiries-container"></div>
+    </main>
+
+    <script>
+        function displayInquiries() {
+            const container = document.getElementById('inquiries-container');
+            const storedData = JSON.parse(localStorage.getItem('contactFormData')) || [];
+
+            if (storedData.length > 0) {
+                storedData.forEach((formData, index) => {
+                    const inquiryElement = document.createElement('div');
+                    inquiryElement.className = 'inquiry';
+                    inquiryElement.innerHTML = `
+                        <h2>Inquiry #${index + 1}</h2>
+                        <p><strong>Name:</strong> ${formData.name}</p>
+                        <p><strong>Email:</strong> ${formData.email}</p>
+                        <p><strong>Mobile:</strong> ${formData.mobile}</p>
+                        <p><strong>Message:</strong> ${formData.message}</p>
+                    `;
+                    container.appendChild(inquiryElement);
+                });
+            } else {
+                container.innerHTML = '<p>No new inquiries at this time.</p>';
+            }
+        }
+
+        window.onload = displayInquiries;
+    </script>
+</body>
+</html>

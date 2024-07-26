@@ -1,0 +1,143 @@
+/* holidays.css */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.holiday-intro,
+.domestic-holidays,
+.international-holidays {
+    background-color: #F4F2F0;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.holiday-intro-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.holiday-intro h1 {
+    font-family: 'Merriweather', serif;
+    color: #333;
+    font-size: 2.5em;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.holiday-intro blockquote {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    color: #666;
+    max-width: 50%;
+    text-align: right;
+    margin: 0;
+}
+
+.holiday-intro cite {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 2em;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.holiday-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.holiday-list {
+    flex: 0.4;
+    padding-right: 20px;
+}
+
+.holiday-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.holiday-list li {
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    color: #444;
+    padding: 5px 0;
+    padding-left: 25px;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.holiday-list li::before {
+    content: "•";
+    color: #E74C3C;
+    position: absolute;
+    left: 0;
+    font-size: 1.8em;
+    line-height: 1;
+}
+
+.holiday-list li:hover {
+    color: #E74C3C;
+    transform: translateX(5px);
+}
+
+.holiday-images {
+    flex: 0.6;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.holiday-images img {
+    width: calc(50% - 10px);
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.holiday-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .holiday-intro-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .holiday-intro blockquote {
+        max-width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .holiday-content {
+        flex-direction: column;
+    }
+
+    .holiday-list {
+        margin-bottom: 20px;
+        padding-right: 0;
+    }
+
+    .holiday-images img {
+        width: calc(100% - 5px);
+    }
+}

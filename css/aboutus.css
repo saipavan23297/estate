@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap');
+
+body{
+    color: #1760a9;
+}
+.main-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.main-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #3498db;
+}
+
+.about-section-1,
+.about-section-2 {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.about-section-1 {
+    padding-top: 40px;
+}
+
+.about-section-1 .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.text-container {
+    flex: 1;
+}
+
+.bold-paragraph {
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.text-container p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.about-section-2 .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.feature-item {
+    flex: 1;
+    text-align: center;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.feature-item p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 2.5em;
+        margin-bottom: 40px;
+    }
+
+    .about-section-1 .container,
+    .about-section-2 .container {
+        flex-direction: column;
+    }
+
+    .image-container,
+    .text-container,
+    .feature-item {
+        width: 100%;
+    }
+}
